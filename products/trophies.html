@@ -1,0 +1,62 @@
+<!-- trophies.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Trophies & Medals - JV Indians</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <script src="../js/script.js" defer></script>
+</head>
+<body>
+
+  <header>
+    <div class="logo">JV INDIANS</div>
+    <nav>
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="abacus.html">Abacus</a></li>
+        <li><a href="trophies.html" class="active">Trophies</a></li>
+        <li><a href="../contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="categories">
+    <h2>🏆 Trophies, Cups & Medals</h2>
+    <p>Reward your champions with our best-in-class awards and medal designs.</p>
+
+    <div class="grid" id="trophy-grid">
+      <div class="card trophy-card" data-category="cups">
+        <img src="../images/trophy1.jpg" alt="Golden Cup">
+        <p>Golden Cup (Code: TC01)</p>
+      </div>
+
+      <div class="card trophy-card" data-category="medals">
+        <img src="../images/medal1.jpg" alt="Silver Medal">
+        <p>Silver Medal (Code: TM01)</p>
+      </div>
+
+      <div class="card trophy-card" data-category="cups">
+        <img src="../images/trophy2.jpg" alt="Star Trophy">
+        <p>Star Trophy (Code: TC02)</p>
+      </div>
+
+      <div class="card trophy-card" data-category="medals">
+        <img src="../images/medal2.jpg" alt="Gold Medal">
+        <p>Gold Medal (Code: TM02)</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="filter-section">
+    <button onclick="filterTrophies('all')">All</button>
+    <button onclick="filterTrophies('cups')">Cups</button>
+    <button onclick="filterTrophies('medals')">Medals</button>
+  </section>
+
+  <footer>
+    <p>© 2025 JV Indians. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

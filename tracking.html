@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tracking - JV Indians</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f8ff;
+      margin: 0;
+      padding-top: 140px;
+    }
+
+    header {
+      background-color: #002f6c;
+      color: white;
+      padding: 10px 20px;
+      text-align: center;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 999;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    header h1 {
+      margin: 5px 0;
+      font-size: 22px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      gap: 15px;
+      padding: 10px 0;
+      margin: 0;
+    }
+
+    nav ul li {
+      white-space: nowrap;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 15px;
+      padding: 6px 10px;
+      display: inline-block;
+    }
+
+    nav ul li a:hover {
+      background-color: #004080;
+      border-radius: 5px;
+    }
+
+    h2 {
+      text-align: center;
+      color: #002f6c;
+      margin: 25px 10px;
+      font-size: 24px;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      max-width: 1200px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    .box {
+      background-color: white;
+      border-radius: 10px;
+      border: 2px solid #0073b1;
+      box-shadow: 0 2px 10px rgba(0, 115, 177, 0.2);
+      width: 100%;
+      max-width: 360px;
+      transition: 0.3s ease-in-out;
+      overflow: hidden;
+      flex: 1 1 300px;
+    }
+
+    .box:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 24px rgba(0, 115, 177, 0.4);
+    }
+
+    .box h3 {
+      margin: 0;
+      padding: 15px;
+      background-color: #0073b1;
+      color: white;
+      font-size: 18px;
+      text-align: center;
+    }
+
+    .box .content {
+      padding: 20px;
+      font-size: 15px;
+      line-height: 1.6;
+      color: #333;
+    }
+
+    .content ul {
+      padding-left: 18px;
+      margin: 0;
+    }
+
+    .scroll-list {
+      max-height: 300px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .scroll-list ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      animation: scrollList 25s linear infinite;
+    }
+
+    .scroll-list li {
+      padding: 6px 0;
+    }
+
+    @keyframes scrollList {
+      0% { transform: translateY(0); }
+      100% { transform: translateY(-50%); }
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #002f6c;
+      color: white;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        padding: 10px;
+        gap: 15px;
+      }
+
+      h2 {
+        font-size: 20px;
+      }
+
+      .box h3 {
+        font-size: 17px;
+      }
+
+      .box .content {
+        font-size: 14px;
+      }
+
+      nav ul {
+        justify-content: flex-start;
+        padding: 10px;
+        overflow-x: scroll;
+      }
+
+      nav ul::-webkit-scrollbar {
+        height: 5px;
+      }
+
+      nav ul::-webkit-scrollbar-thumb {
+        background-color: rgba(255,255,255,0.3);
+        border-radius: 5px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .box {
+        max-width: 100%;
+      }
+
+      header h1 {
+        font-size: 18px;
+      }
+
+      .box .content {
+        padding: 15px;
+        font-size: 13.5px;
+      }
+
+      nav ul li a {
+        font-size: 14px;
+      }
+
+      .scroll-list {
+        max-height: 220px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>JV Indians - Tracking</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="feedback.html">Feedback</a></li>
+        <li><a href="paymode.html">Paymode</a></li>
+        <li><a href="tracking.html">Tracking</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <h2>Track Your Consignment</h2>
+
+  <div class="container">
+
+    <!-- Tracking Info -->
+    <div class="box">
+      <h3>Tracking Options</h3>
+      <div class="content">
+        <ul>
+          <li>DTDC Courier</li>
+          <li>TCI Express Courier</li>
+          <li>VRL Cargo</li>
+          <li>XPS Cargo</li>
+          <li>KPN Travels</li>
+          <li>Anjani Courier</li>
+          <li>Shree Nandan Courier</li>
+          <li>Professional Courier</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Product List -->
+    <div class="box">
+      <h3>Product List</h3>
+      <div class="content scroll-list">
+        <ul>
+          <li>Abacus</li>
+          <li>Abacus Beads</li>
+          <li>Abacus Book (English)</li>
+          <li>Abacus Book (Tamil)</li>
+          <li>Abacus Box</li>
+          <li>Abacus Clock</li>
+          <li>Abacus Cover</li>
+          <li>Abacus Education Books</li>
+          <li>Abacus Fingering Book</li>
+          <li>Abacus Kit</li>
+          <li>Abacus Maths for Kids</li>
+          <li>Abacus Maths Genius Books</li>
+          <li>Abacus Mental Arithmetic</li>
+          <li>Abacus Mental Maths Book</li>
+          <li>Abacus Pouch</li>
+          <li>Abacus Teacher Manual Book</li>
+          <li>Abacus Tech</li>
+          <li>Abacus Toys</li>
+          <li>Abacus Watch, Bags</li>
+          <li>Rubik’s Cube Tool</li>
+          <li>Vedic Maths Kit</li>
+          <li>Calligraphy Pen Set</li>
+          <li>Drawing Instruments</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Supply Chain -->
+    <div class="box">
+      <h3>Supply Chain</h3>
+      <div class="content scroll-list">
+        <ul>
+          <li>Adilabad</li>
+          <li>Anantapur</li>
+          <li>Chittoor</li>
+          <li>East Godavari</li>
+          <li>Guntur</li>
+          <li>Hyderabad</li>
+          <li>Kadapa</li>
+          <li>Karimnagar</li>
+          <li>Khammam</li>
+          <li>Krishna</li>
+          <li>Kurnool</li>
+          <li>Nellore</li>
+          <li>Nizamabad</li>
+          <li>Prakasam</li>
+          <li>Rangareddy</li>
+          <li>Srikakulam</li>
+          <li>Visakhapatnam</li>
+          <li>Vizianagaram</li>
+          <li>Warangal</li>
+          <li>West Godavari</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+  <footer>
+    <p>© 2025 JV Indians. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

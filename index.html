@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>JV Indians - Educational Tools & Trophies</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css " />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f4f9ff;
+      color: #333;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #004080;
+      padding: 10px 20px;
+      color: #fff;
+    }
+    .logo {
+      font-size: 22px;
+      font-weight: bold;
+    }
+    nav ul {
+      display: flex;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    nav ul li {
+      margin-left: 15px;
+    }
+    nav ul li a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: 500;
+      padding: 6px 10px;
+    }
+
+    .bg-img {
+      background: url('images/wb.jpg') no-repeat center center/cover;
+      height: 200px;
+    }
+
+    .green-bar {
+      background: #0066cc;
+    }
+
+    .menu {
+      display: flex;
+      flex-wrap: wrap;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .menu > li {
+      position: relative;
+      margin-right: 1px;
+    }
+
+    .menu > li > a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 10px 15px;
+      display: block;
+    }
+
+    .menu li ul {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: #fff;
+      border: 1px solid #ccc;
+      padding: 10px;
+      border-radius: 6px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+      z-index: 1000;
+      min-width: 220px;
+    }
+
+    .menu li ul li {
+      position: relative;
+    }
+
+    .menu li ul li a {
+      color: #004080;
+      text-decoration: none;
+      font-weight: 500;
+      padding: 6px 0;
+      display: block;
+    }
+
+    .menu li ul li a:hover {
+      text-decoration: underline;
+    }
+
+    /* Sub-submenu style */
+    .menu li ul li ul {
+      left: 100%;
+      top: 0;
+      display: none;
+    }
+
+    /* Hover effects */
+    .menu > li:hover > ul,
+    .menu li ul li:hover > ul {
+      display: block;
+    }
+
+    main {
+      padding: 30px 20px;
+    }
+
+    .about-section {
+      background: #ffffff;
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    .about-section h2 {
+      color: #004080;
+    }
+
+    .highlight {
+      color: #0073e6;
+    }
+
+    .checklist {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .checklist li {
+      margin-bottom: 6px;
+    }
+
+    .categories {
+      margin-top: 40px;
+    }
+
+    .categories h2 {
+      color: #004080;
+    }
+
+    .grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .card {
+      flex: 1 1 200px;
+      background: #fff;
+      padding: 10px;
+      border-radius: 10px;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    .card img {
+      max-width: 100%;
+      height: 150px;
+      object-fit: contain;
+    }
+
+    .contact-section {
+      padding: 30px 20px;
+      background: #e9f3ff;
+    }
+
+    .contact-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+
+    .contact-form, .contact-details {
+      flex: 1;
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 8px;
+      margin: 8px 0;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    .form-buttons {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 10px;
+    }
+
+    .form-buttons button {
+      padding: 8px 16px;
+      border: none;
+      background: #004080;
+      color: white;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .form-buttons button[type="reset"] {
+      background: #6c757d;
+    }
+
+    .contact-details p {
+      margin: 10px 0;
+    }
+
+    .social-icons a {
+      margin-right: 10px;
+      color: #004080;
+      font-size: 20px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 10px;
+      background: #004080;
+      color: #fff;
+      margin-top: 20px;
+    }
+
+    @media (max-width: 768px) {
+      .menu {
+        flex-direction: column;
+      }
+      .menu > li {
+        width: 100%;
+      }
+      .menu > li > a {
+        padding: 12px 15px;
+      }
+      .menu li ul,
+      .menu li ul li ul {
+        position: static;
+        box-shadow: none;
+        border-radius: 0;
+        width: 100%;
+        left: 0;
+        display: none !important;
+      }
+      .menu > li:hover > ul,
+      .menu li:hover ul {
+        display: none !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">JV INDIANS</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="feedback.html">Feedback</a></li>
+        <li><a href="paymode.html">Paymode</a></li>
+        <li><a href="tracking.html">Tracking</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Background Image -->
+  <div class="bg-img"></div>
+
+  <!-- Main Navigation Menu -->
+  <div class="green-bar">
+    <ul class="menu">
+      <!-- Student Abacus -->
+      <li>
+        <a href="#">Student Abacus ▾</a>
+        <ul>
+          <li><a href="6rod.html">6 Rod Abacus</a></li>
+          <li><a href="7rod.html">7 Rod Abacus</a></li>
+          <li><a href="13rod.html">13 Rod Abacus</a></li>
+          <li><a href="15rod.html">15 Rod Abacus</a></li>
+          <li><a href="17rod.html">17 Rod Abacus</a></li>
+          <li><a href="21rod.html">21 Rod Abacus</a></li>
+          <li><a href="23rod.html">23 Rod Abacus</a></li>
+          <li><a href="Gift.html">Gift Abacus</a></li>
+          <li><a href="multicolor.html">Multi Color Abacus</a></li>
+          <li><a href="Braille.html">Braille Abacus</a></li>
+        </ul>
+      </li>
+
+      <!-- Master Abacus -->
+      <li>
+        <a href="#">Master Abacus ▾</a>
+        <ul>
+          <li><a href="master-5rod.html">5 Rod Master</a></li>
+          <li><a href="master-6rod.html">6 Rod Master</a></li>
+          <li><a href="master-7rod.html">7 Rod Master</a></li>
+          <li><a href="master-10rod.html">10 Rod Master</a></li>
+          <li><a href="master-11rod.html">11 Rod Master</a></li>
+          <li><a href="master-13rod.html">13 Rod Master</a></li>
+          <li><a href="master-17rod.html">17 Rod Master</a></li>
+          <li><a href="master-21rod.html">21 Rod Master</a></li>
+          <li><a href="color1.html">Color Abacus</a></li>
+        </ul>
+      </li>
+
+      <!-- Lab Materials -->
+      <li>
+        <a href="#">Lab Materials ▾</a>
+        <ul>
+          <li><a href="Set Square.html">Set Square</a></li>
+          <li>
+            <a>Mini Drafter ▸</a>
+            <ul>
+              <li><a href="bag.html">Bag</a></li>
+              <li><a href="cap.html">Cap</a></li>
+              <li><a href="gcap.html">Graduation Cap</a></li>
+              <li><a href="tshirt.html">T-Shirt</a></li>
+              <li><a href="pb.html">Pouch and Box</a></li>
+              <li><a href="ta.html">Teacher Abacus Bag</a></li>
+              <li><a href="fc.html">Flash Card</a></li>
+              <li><a href="stopw.html">Stop Watch</a></li>
+            </ul>
+          </li>
+          <li><a href="Divider.html">Divider</a></li>
+          <li><a href="Protractor.html">Protractor</a></li>
+          <li><a href="DrawingInstrumentsBox.html">Drawing Instruments Box</a></li>
+          <li><a href="DrawingBoard.html">Drawing Board</a></li>
+          <li><a href="Drawingsheetcontainer.html">Drawing Sheet Container</a></li>
+          <li><a href="Scale.html">Scale</a></li>
+          <li><a href="chess.html">Chess</a></li>
+        </ul>
+      </li>
+
+      <!-- Course Materials -->
+      <li>
+        <a href="#">Course Materials ▾</a>
+        <ul>
+          <li>
+            <a>Abacus ▸</a>
+            <ul>
+              <li><a href="abacus.html">Junior based 4-6 Yrs Student Books</a></li>
+              <li><a href="abacus.html">Center based 6-13Yrs Student Books</a></li>
+              <li><a href="abacus.html">School based 6-13Yrs Student Book</a></li>
+              <li><a href="abacus.html">Senior based 14-18 Yrs Student Books</a></li>
+              <li><a href="abacus.html">Abacus Training Video</a></li>
+              <li><a href="abacus.html">Abacus Oral/Dictation CD</a></li>
+              <li><a href="abacus.html">Practice Exercise CD (Hindi/English/Tamil)</a></li>
+              <li><a href="abacus.html">Abacus Marketing Video</a></li>
+              <li><a href="abacus.html">Speed Writing Note</a></li>
+              <li><a href="abacus.html">Oral/Dictation Book</a></li>
+              <li><a href="abacus.html">Teacher Manual (Tamil)</a></li>
+              <li><a href="abacus.html">Teacher Manual (English)</a></li>
+              <li><a href="abacus.html">Teacher Training</a></li>
+              <li><a href="abacus.html">Abacus Kits</a></li>
+            </ul>
+          </li>
+          <li>
+            <a>Vedic Maths ▸</a>
+            <ul>
+              <li><a href="vedic.html">Student Books</a></li>
+              <li><a href="vedic.html">Teacher Manuals</a></li>
+              <li><a href="vedic.html">Training Videos (6 DVD)</a></li>
+            </ul>
+          </li>
+          <li>
+            <a>Memory Techniques ▸</a>
+            <ul>
+              <li><a href="memory.html">Teacher Manuals (Tamil)</a></li>
+              <li><a href="memory.html">Teacher Manuals (Telugu)</a></li>
+              <li><a href="memory.html">Teacher Manuals (Hindi)</a></li>
+              <li><a href="memory.html">Teacher Manuals (English)</a></li>
+              <li><a href="memory.html">Student Books</a></li>
+            </ul>
+          </li>
+          <li>
+            <a>Calligraphy ▸</a>
+            <ul>
+              <li><a href="calligraphy.html">Student Books</a></li>
+              <li><a href="calligraphy.html">Teacher Manuals</a></li>
+              <li><a href="calligraphy.html">Calligraphy Pen with 9 Holders</a></li>
+              <li><a href="calligraphy.html">Calligraphy Pen with 4 Holders</a></li>
+              <li><a href="calligraphy.html">Double Pen and 7 Nib Set</a></li>
+              <li><a href="calligraphy.html">Single Pen and 7 Nib Set</a></li>
+              <li><a href="calligraphy.html">Calligraphy Nib Set</a></li>
+            </ul>
+          </li>
+          <li>
+            <a>Kids English ▸</a>
+            <ul>
+              <li><a href="kids-english.html">Student Books</a></li>
+              <li><a href="kids-english.html">Teacher Manuals</a></li>
+            </ul>
+          </li>
+          <li>
+            <a>Phonics Books ▸</a>
+            <ul>
+              <li><a href="phonics.html">Student Books</a></li>
+              <li><a href="phonics.html">Teacher Manuals</a></li>
+            </ul>
+          </li>
+          <li><a href="drawing.html">Drawing Books</a></li>
+          <li><a href="substitution.html">One Word Substitution</a></li>
+          <li><a href="counseling.html">Career Counseling</a></li>
+          <li>
+            <a>Handwriting ▸</a>
+            <ul>
+              <li><a href="handwriting.html">Student Book</a></li>
+              <li><a href="handwriting.html">Teacher Training</a></li>
+              <li><a href="handwriting.html">Teacher Manuals</a></li>
+            </ul>
+          </li>
+          <li><a href="graphology.html">Graphology</a></li>
+          <li><a href="abacus-association.html">Abacus Association</a></li>
+          <li><a href="spellbee.html">Spell Bee</a></li>
+        </ul>
+      </li>
+
+      <!-- Merchandise -->
+      <li>
+        <a href="#">Merchandise ▾</a>
+        <ul>
+          <li><a href="bag.html">Bag</a></li>
+          <li><a href="cap.html">Cap</a></li>
+          <li><a href="gcap.html">Graduation Cap</a></li>
+          <li><a href="tshirt.html">T-Shirt</a></li>
+          <li><a href="pb.html">Pouch and Box</a></li>
+          <li><a href="ta.html">Teacher Abacus Bag</a></li>
+          <li><a href="fc.html">Flash Card</a></li>
+          <li><a href="stopw.html">Stop Watch</a></li>
+        </ul>
+      </li>
+
+      <!-- Special Course -->
+      <li>
+        <a href="#">Special Course ▾</a>
+        <ul>
+          <li>
+            <a>Education CD ▸</a>
+            <ul>
+              <li><a href="kidseducation.html">Kids Education</a></li>
+              <li><a href="completesystem.html">Complete Learning System</a></li>
+              <li><a href="mentalmaths.html">Mental Maths</a></li>
+              <li><a href="phonic.html">Phonic Spelling</a></li>
+              <li><a href="littlelearners.html">Little Learners</a></li>
+              <li><a href="educationactivities.html">Kids Education and Activities</a></li>
+              <li><a href="schooleducation.html">School Education</a></li>
+              <li><a href="rhymes.html">Rhymes</a></li>
+            </ul>
+          </li>
+          <li><a href="creativitykits.html">Creativity Kits</a></li>
+          <li><a href="kalfun.html">Kalfun Maths Tool</a></li>
+          <li><a href="happyreading.html">Happy Reading Kit</a></li>
+          <li><a href="rubik.html">Rubik's Cube</a></li>
+          <li><a href="mathlab.html">Math Lab</a></li>
+          <li><a href="prizes.html">Prizes and Momentos</a></li>
+          <li><a href="stories.html">Tamil Stories</a></li>
+          <li><a href="robotics.html">Robotics Books</a></li>
+        </ul>
+      </li>
+
+      <!-- Links -->
+      <li>
+        <a href="#">Links ▾</a>
+        <ul>
+          <li><a href="useful.html">Useful Links</a></li>
+          <li><a href="oursupply.html">Our Supply Chain</a></li>
+          <li><a href="careers.html">Careers</a></li>
+          <li>
+            <a>Competition ▸</a>
+            <ul>
+              <li><a href="33rd.html">33rd Abacus Competition</a></li>
+              <li><a href="22nd.html">22nd Abacus Competition</a></li>
+              <li><a href="21st.html">21st Abacus Competition</a></li>
+            </ul>
+          </li>
+          <li><a href="customers.html">Customer Service</a></li>
+          <li><a href="sitemap.html">Site Map</a></li>
+          <li><a href="abacusm.html">Model Question Paper</a></li>
+        </ul>
+      </li>
+
+      <!-- Media Gallery -->
+      <li>
+        <a href="#">Media Gallery ▾</a>
+        <ul>
+          <li><a href="cp.html">Corporate Presentation</a></li>
+          <li><a href="mg.html">Media Gallery</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Main Content -->
+  <main>
+    <section class="about-section">
+      <h2>Welcome to <span class="highlight">JAYAVARAD Graphics</span></h2>
+      <p>We are one amongst the principal <strong>manufacturers, suppliers and exporters</strong> of optimum quality abacus products.</p>
+      <p>Specialized in a wide range of <strong>student and teacher abacus</strong>, we proudly supply to numerous reputed institutions across India and abroad.</p>
+      <p>Being an IE Code holder, we follow essential production practices to maintain our global export standards.</p>
+      <p>Our service is defined by <strong>quick response, timely delivery</strong> and a commitment to building long-term partnerships with our clients.</p>
+      <ul class="checklist">
+        <li>🧠 Helps increase creativity</li>
+        <li>🎯 Enhances concentration</li>
+        <li>💡 Strengthens imagination</li>
+        <li>👂 Sharpens listening ability</li>
+        <li>🗂️ Boosts memory power</li>
+        <li>👁️ Enables visualization</li>
+        <li>💪 Increases confidence</li>
+        <li>⚡ Boosts calculation speed</li>
+      </ul>
+    </section>
+
+    <section class="certifications" id="certifications" style="padding: 50px 20px; background: #f9f9f9; text-align: center;">
+  <h2 style="font-size: 28px; color: #004080; margin-bottom: 40px;">Our Certifications</h2>
+  
+  <div class="grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; max-width: 1200px; margin: auto;">
+    
+    <div class="card" style="background: #fff; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); overflow: hidden; text-align: left;">
+      <img src="images/certificate1.jpg" alt="ISO Certification" style="width: 100%; height: 200px; object-fit: cover;">
+      <div style="padding: 20px;">
+        <h3 style="color: #004080; font-size: 20px; margin-bottom: 10px;">ISO 9001:2015 Certified</h3>
+        <p style="color: #333;">We maintain international standards in quality management to deliver consistent and reliable products.</p>
+      </div>
+    </div>
+
+    <div class="card" style="background: #fff; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); overflow: hidden; text-align: left;">
+      <img src="images/certificate2.jpg" alt="STED Council" style="width: 100%; height: 200px; object-fit: cover;">
+      <div style="padding: 20px;">
+        <h3 style="color: #004080; font-size: 20px; margin-bottom: 10px;">STED Council Recognition</h3>
+        <p style="color: #333;">Our training and materials are approved and aligned with the Skill Training & Education Development Council standards.</p>
+      </div>
+    </div>
+
+    <div class="card" style="background: #fff; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); overflow: hidden; text-align: left;">
+      <img src="images/certificate3.jpg" alt="Educational Board" style="width: 100%; height: 200px; object-fit: cover;">
+      <div style="padding: 20px;">
+        <h3 style="color: #004080; font-size: 20px; margin-bottom: 10px;">Educational Board Affiliation</h3>
+        <p style="color: #333;">JV Indians is affiliated with several reputed educational boards ensuring authenticity and excellence in learning tools.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+  </main>
+<!-- Contact Section -->
+<section id="contact" style="padding: 40px 20px; background-color: #f9f9f9; font-family: Arial, sans-serif;">
+  <h2 style="text-align: center; font-size: 32px; margin-bottom: 30px; color: #004080;">Contact Us</h2>
+  <div style="display: flex; flex-wrap: wrap; gap: 30px; max-width: 1100px; margin: 0 auto;">
+
+    <!-- Contact Form -->
+    <div style="flex: 1; min-width: 280px; max-width: 500px; background-color: #fff; padding: 24px; border-radius: 12px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); box-sizing: border-box;">
+  <h3 style="color: #004080; margin-bottom: 20px; font-size: 22px;">ENQUIRY</h3>
+
+  <form action="#" method="post" style="box-sizing: border-box;">
+    <input type="text" placeholder="Name" required 
+           style="display: block; width: 100%; padding: 12px; margin-bottom: 14px; border: 1px solid #ccc; border-radius: 6px; font-size: 15px; box-sizing: border-box;">
+
+    <input type="tel" placeholder="Mobile" required 
+           style="display: block; width: 100%; padding: 12px; margin-bottom: 14px; border: 1px solid #ccc; border-radius: 6px; font-size: 15px; box-sizing: border-box;">
+
+    <input type="email" placeholder="Email" required 
+           style="display: block; width: 100%; padding: 12px; margin-bottom: 14px; border: 1px solid #ccc; border-radius: 6px; font-size: 15px; box-sizing: border-box;">
+
+    <textarea placeholder="JV Indians Site Feedback" rows="5" required 
+              style="display: block; width: 100%; padding: 12px; margin-bottom: 18px; border: 1px solid #ccc; border-radius: 6px; font-size: 15px; resize: vertical; box-sizing: border-box;"></textarea>
+
+    <div style="display: flex; gap: 10px;">
+      <button type="submit" 
+              style="flex: 1; padding: 12px; background-color: #004080; color: #fff; border: none; border-radius: 6px; cursor: pointer; font-size: 15px;">
+        Send
+      </button>
+      <button type="reset" 
+              style="flex: 1; padding: 12px; background-color: #888; color: #fff; border: none; border-radius: 6px; cursor: pointer; font-size: 15px;">
+        Reset
+      </button>
+    </div>
+  </form>
+</div>
+
+
+    <!-- Contact Details -->
+    <div style="flex: 1; min-width: 280px; background-color: #fff; padding: 20px; border-radius: 12px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+      <h3 style="color: #004080; margin-bottom: 15px;">Marketing Office</h3>
+      <p style="line-height: 1.6; margin-bottom: 10px;">
+        New No. 25, Old No.9, Chari Street,<br>
+        North Usman Road,<br>
+        T.Nagar, Chennai - 600017,<br>
+        Tamilnadu, India.
+      </p>
+      <p>Email: 
+        <a href="mailto:alagappan_sk@yahoo.com" style="color: #004080;">alagappan_sk@yahoo.com</a>, 
+        <a href="mailto:info@jvindians.com" style="color: #004080;">info@jvindians.com</a>
+      </p>
+      <p>Phone: 044-42071815</p>
+      <p>Tele Fax: 044-42071815</p>
+      <p>Cell: (+91) - 98410 23115 / 72999 23115</p>
+      <div style="margin-top: 15px;">
+        <a href="#" style="margin-right: 10px; color: #004080; font-size: 20px;"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" style="margin-right: 10px; color: #004080; font-size: 20px;"><i class="fab fa-youtube"></i></a>
+        <a href="#" style="margin-right: 10px; color: #004080; font-size: 20px;"><i class="fab fa-twitter"></i></a>
+        <a href="#" style="color: #004080; font-size: 20px;"><i class="fab fa-google"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer style="background-color: #004080; color: white; text-align: center; padding: 15px 0; font-size: 14px;">
+  <p>© 2025 JV Indians. All rights reserved.</p>
+</footer>
+
+<!-- FontAwesome CDN (Include if not already present) -->
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+  <!-- Enhanced Dropdown Script -->
+  <script>
+    document.querySelectorAll('.menu > li').forEach(item => {
+      item.addEventListener('mouseenter', () => {
+        const submenu = item.querySelector('ul');
+        if (submenu) submenu.style.display = 'block';
+      });
+      item.addEventListener('mouseleave', () => {
+        const submenu = item.querySelector('ul');
+        if (submenu) submenu.style.display = 'none';
+      });
+    });
+
+    // For nested submenus (like Mini Drafter)
+    document.querySelectorAll('.menu ul li').forEach(li => {
+      const sub = li.querySelector('ul');
+      if (!sub) return;
+      li.addEventListener('mouseenter', () => {
+        sub.style.display = 'block';
+      });
+      li.addEventListener('mouseleave', () => {
+        sub.style.display = 'none';
+      });
+    });
+  </script>
+
+</body>
+</html>
